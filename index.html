@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Nabiya's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <h2>Nabiya</h2>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">My Skills</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- Home Section -->
+    <section id="home">
+
+        <img src="images/IMG_1234.jpg" alt="Nabiya" class="profile">
+
+        <h1>Hi, I'm Nabiya 👋</h1>
+
+        <h2>Computer Science Engineering Student</h2>
+
+        <p>
+            I am learning programming, web development
+            and building interesting projects.
+        </p>
+
+        <div class="home-buttons">
+
+            <button onclick="sayHello()">Say Hello</button>
+
+            <a href="resume.pdf"
+               class="resume-button"
+               target="_blank">
+                View Resume
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Me Section -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a Computer Science Engineering student
+            learning programming, web development and technology.
+        </p>
+
+        <div class="social-links">
+
+            <a href="https://github.com/nabiyakhan2202-alt"
+               target="_blank">
+                GitHub
+            </a>
+
+            <a href="YOUR_LINKEDIN_URL"
+               target="_blank">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <h3>C Programming</h3>
+                <p>Learning programming fundamentals.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>C++</h3>
+                <p>Learning object-oriented programming.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Python</h3>
+                <p>Learning Python programming.</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>Learning HTML, CSS and JavaScript.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education Section -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education-card">
+
+            <h3>Computer Science Engineering</h3>
+
+            <p>
+                Learning programming, web development
+                and technology.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+
+
+            <!-- Project 1 -->
+            <div class="project-card">
+
+                <h3>C Programming - Hello World</h3>
+
+                <p>
+                    My first C programming project created
+                    and uploaded to GitHub.
+                </p>
+
+                <a href="https://github.com/nabiyakhan2202-alt/hello-world-c"
+                   class="project-button"
+                   target="_blank">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 2 -->
+            <div class="project-card">
+
+                <h3>Personal Portfolio Website</h3>
+
+                <p>
+                    My personal portfolio website created
+                    using HTML, CSS and JavaScript.
+                </p>
+
+                <a href="#"
+                   class="project-button">
+                    View Project
+                </a>
+
+            </div>
+
+
+            <!-- Project 3 -->
+            <div class="project-card">
+
+                <h3>IoT Project</h3>
+
+                <p>
+                    A project based on Arduino and sensors,
+                    created as part of my engineering studies.
+                </p>
+
+                <a href="#"
+                   class="project-button">
+                    View Project
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <form onsubmit="sendMessage(event)">
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                placeholder="Your Message"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Nabiya. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
