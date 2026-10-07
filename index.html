@@ -461,60 +461,218 @@
     }
 
     /* Portfolio polish */
-    .about-box { display:grid; gap:16px; }
-    .about-box br { display:none; }
-    .activity-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
-    .activity-card { position:relative; min-height:190px; padding:26px; }
-    .activity-card::before { content:""; position:absolute; left:24px; right:24px; top:0; height:3px; border-radius:0 0 5px 5px; background:linear-gradient(90deg,var(--primary),var(--accent)); }
-    .activity-number { display:inline-flex; padding:5px 8px; border-radius:7px; background:var(--surface-soft); }
-    .skills-grid { gap:22px; }
-    .skill-group { box-shadow:0 8px 24px rgba(28,43,76,.045); }
-    .skill-group h3 { display:flex; align-items:center; gap:10px; }
-    .skill-group h3::before { content:""; width:7px; height:22px; border-radius:5px; background:var(--primary); }
-    .tag { border:1px solid #dbe3ff; transition:.2s ease; }
-    .tag:hover { transform:translateY(-2px); background:#e5ecff; }
-    .goal { position:relative; overflow:hidden; }
-    .goal::after { content:""; position:absolute; width:330px; height:330px; right:-130px; top:-170px; border:1px solid rgba(49,87,213,.14); border-radius:50%; box-shadow:0 0 0 34px rgba(49,87,213,.035),0 0 0 68px rgba(49,87,213,.02); pointer-events:none; }
-    .goal .container { position:relative; z-index:1; }
-    .goal-box { border-left:5px solid var(--primary); box-shadow:0 18px 45px rgba(49,87,213,.10); }
-    .contact-grid-profiles { grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px; }
-    .profile-contact { display:flex; flex-direction:column; min-height:245px; padding:25px; transition:.2s ease; }
-    .profile-contact:hover { transform:translateY(-4px); box-shadow:var(--shadow); }
-    .profile-contact p { flex:1; }
-    .contact-icon { width:44px; height:44px; display:grid; place-items:center; margin-bottom:17px; border-radius:13px; background:var(--surface-soft); color:var(--primary-dark); font-weight:900; }
-    .profile-contact .social-link { width:100%; text-align:center; }
-    @media (max-width:1000px) { .contact-grid-profiles { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media (max-width:900px) { .activity-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
-    @media (max-width:650px) { .activity-grid,.skills-grid,.contact-grid-profiles { grid-template-columns:1fr; } .profile-contact { min-height:0; } }
+    .about-box {
+      display: grid;
+      gap: 16px;
+    }
 
-  
+    .about-box br {
+      display: none;
+    }
+
+    .activity-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .activity-card {
+      position: relative;
+      min-height: 190px;
+      padding: 26px;
+    }
+
+    .activity-card::before {
+      content: "";
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      top: 0;
+      height: 3px;
+      border-radius: 0 0 5px 5px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    .activity-number {
+      display: inline-flex;
+      padding: 5px 8px;
+      border-radius: 7px;
+      background: var(--surface-soft);
+    }
+
+    .skills-grid {
+      gap: 22px;
+    }
+
+    .skill-group {
+      box-shadow: 0 8px 24px rgba(28, 43, 76, 0.045);
+    }
+
+    .skill-group h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-group h3::before {
+      content: "";
+      width: 7px;
+      height: 22px;
+      border-radius: 5px;
+      background: var(--primary);
+    }
+
+    .tag {
+      border: 1px solid #dbe3ff;
+      transition: 0.2s ease;
+    }
+
+    .tag:hover {
+      transform: translateY(-2px);
+      background: #e5ecff;
+    }
+
+    .goal {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .goal::after {
+      content: "";
+      position: absolute;
+      width: 330px;
+      height: 330px;
+      right: -130px;
+      top: -170px;
+      border: 1px solid rgba(49, 87, 213, 0.14);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 34px rgba(49, 87, 213, 0.035),
+        0 0 0 68px rgba(49, 87, 213, 0.02);
+      pointer-events: none;
+    }
+
+    .goal .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .goal-box {
+      border-left: 5px solid var(--primary);
+      box-shadow: 0 18px 45px rgba(49, 87, 213, 0.10);
+    }
+
+    .contact-grid-profiles {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .profile-contact {
+      display: flex;
+      flex-direction: column;
+      min-height: 245px;
+      padding: 25px;
+      transition: 0.2s ease;
+    }
+
+    .profile-contact:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+    }
+
+    .profile-contact p {
+      flex: 1;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 17px;
+      border-radius: 13px;
+      background: var(--surface-soft);
+      color: var(--primary-dark);
+      font-weight: 900;
+    }
+
+    .profile-contact .social-link {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: 1000px) {
+      .contact-grid-profiles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 900px) {
+      .activity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .activity-grid,
+      .skills-grid,
+      .contact-grid-profiles {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-contact {
+        min-height: 0;
+      }
+    }
+
     /* Final visual refinement */
     .about-box {
       max-width: 920px;
       padding: clamp(24px, 4vw, 38px);
       border-left: 4px solid var(--primary);
     }
-    .about-box p { max-width: 78ch; }
 
-    .activities .section-heading { margin-bottom: 32px; }
-    .activity-grid { align-items: stretch; }
+    .about-box p {
+      max-width: 78ch;
+    }
+
+    .activities .section-heading {
+      margin-bottom: 32px;
+    }
+
+    .activity-grid {
+      align-items: stretch;
+    }
+
     .activity-card {
       display: flex;
       flex-direction: column;
       min-height: 205px;
       overflow: hidden;
     }
-    .activity-card h3 { letter-spacing: -0.015em; }
-    .activity-card p { margin-top: auto; padding-top: 8px; }
-    .activity-number { width: fit-content; }
 
-    .skills-grid { align-items: stretch; }
+    .activity-card h3 {
+      letter-spacing: -0.015em;
+    }
+
+    .activity-card p {
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .activity-number {
+      width: fit-content;
+    }
+
+    .skills-grid {
+      align-items: stretch;
+    }
+
     .skill-group {
       position: relative;
       min-height: 100%;
       padding: 30px;
       overflow: hidden;
     }
+
     .skill-group::after {
       content: "";
       position: absolute;
@@ -526,33 +684,54 @@
       background: rgba(49, 87, 213, 0.055);
       pointer-events: none;
     }
-    .skill-group h3 { position: relative; z-index: 1; }
-    .tags { position: relative; z-index: 1; gap: 10px; }
-    .tag { padding: 8px 13px; }
+
+    .skill-group h3 {
+      position: relative;
+      z-index: 1;
+    }
+
+    .tags {
+      position: relative;
+      z-index: 1;
+      gap: 10px;
+    }
+
+    .tag {
+      padding: 8px 13px;
+    }
 
     .goal-box {
       position: relative;
       padding: clamp(28px, 5vw, 44px);
       border-left: 6px solid var(--primary);
-      background: rgba(255,255,255,.94);
+      background: rgba(255, 255, 255, 0.94);
     }
+
     .goal-box::before {
       content: "";
       position: absolute;
       inset: 14px;
-      border: 1px solid rgba(49,87,213,.08);
+      border: 1px solid rgba(49, 87, 213, 0.08);
       border-radius: 15px;
       pointer-events: none;
     }
-    .goal-box p { position: relative; z-index: 1; }
 
-    .contact-grid-profiles { align-items: stretch; }
+    .goal-box p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-grid-profiles {
+      align-items: stretch;
+    }
+
     .profile-contact {
       display: flex;
       flex-direction: column;
       min-height: 235px;
       padding: 26px;
     }
+
     .contact-icon {
       display: grid;
       place-items: center;
@@ -564,7 +743,11 @@
       color: var(--primary-dark);
       font-weight: 900;
     }
-    .profile-contact p { flex: 1; }
+
+    .profile-contact p {
+      flex: 1;
+    }
+
     .profile-contact .social-link {
       display: flex;
       align-items: center;
@@ -573,23 +756,50 @@
     }
 
     @media (max-width: 900px) {
-      .activity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .contact-grid-profiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .activity-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid-profiles {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
+
     @media (max-width: 650px) {
-      .activity-grid, .skills-grid, .contact-grid-profiles { grid-template-columns: 1fr; }
-      .activity-card { min-height: 0; }
-      .profile-contact { min-height: 0; }
-      .about-box { border-left-width: 3px; }
-      .goal-box { border-left-width: 4px; }
+      .activity-grid,
+      .skills-grid,
+      .contact-grid-profiles {
+        grid-template-columns: 1fr;
+      }
+
+      .activity-card {
+        min-height: 0;
+      }
+
+      .profile-contact {
+        min-height: 0;
+      }
+
+      .about-box {
+        border-left-width: 3px;
+      }
+
+      .goal-box {
+        border-left-width: 4px;
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navigation -->
   <header class="navbar">
     <div class="container nav-inner">
-      <a href="#home" class="logo">Nabiya<span>.</span></a>
+
+      <a href="#home" class="logo">
+        Nabiya<span>.</span>
+      </a>
 
       <nav aria-label="Main navigation">
         <ul class="nav-links">
@@ -600,16 +810,26 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
   <main>
+
     <!-- Hero -->
     <section class="hero" id="home">
       <div class="container hero-grid">
+
         <div>
-          <div class="eyebrow">3rd Semester · B.Tech C&IT</div>
-          <h1>Hi, I'm <span>Nabiya Khan.</span></h1>
+
+          <div class="eyebrow">
+            3rd Semester · B.Tech C&IT
+          </div>
+
+          <h1>
+            Hi, I'm <span>Nabiya Khan.</span>
+          </h1>
+
           <p>
             A B.Tech C&IT student at REVA University with an interest in
             programming and technology. I am building my technical skills
@@ -618,44 +838,76 @@
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#activities">View Activities</a>
-            <a class="btn" href="https://github.com/nabiyakhan2202-alt" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="btn btn-primary" href="#activities">
+              View Activities
+            </a>
+
+            <a
+              class="btn"
+              href="https://github.com/nabiyakhan2202-alt"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
           </div>
+
         </div>
 
         <aside class="profile-card">
-          <div class="profile-mark">NK</div>
+
+          <div class="profile-mark">
+            NK
+          </div>
+
           <h2>Nabiya Khan</h2>
-          <p>B.Tech C&IT Student</p>
+
+          <p>
+            B.Tech C&IT Student
+          </p>
 
           <div class="profile-meta">
+
             <div class="meta-row">
               <span>Semester</span>
               <span>3rd</span>
             </div>
+
             <div class="meta-row">
               <span>Branch</span>
               <span>B.Tech C&IT</span>
             </div>
+
             <div class="meta-row">
               <span>University</span>
               <span>REVA University</span>
             </div>
+
           </div>
+
         </aside>
+
       </div>
     </section>
 
     <!-- About -->
     <section id="about">
       <div class="container">
+
         <div class="section-heading">
           <div class="label">About Me</div>
-          <h2>Learning through practical work.</h2>
-          <p>A short introduction to my current learning journey.</p>
+
+          <h2>
+            Learning through practical work.
+          </h2>
+
+          <p>
+            A short introduction to my current learning journey.
+          </p>
         </div>
 
         <div class="about-box">
+
           <p>
             I am Nabiya Khan, a third-semester B.Tech C&IT student at REVA
             University interested in programming and technology. I am building
@@ -663,100 +915,153 @@
             GitHub through coursework, practical activities, and coding
             practice on LeetCode.
           </p>
+
           <p>
             I enjoy learning through practical projects and improving my
             problem-solving and technical skills. My goal is to become more
             confident in programming and build a strong technical portfolio
             for future internships and career opportunities.
           </p>
+
         </div>
+
       </div>
     </section>
 
     <!-- Activities -->
     <section class="activities" id="activities">
       <div class="container">
+
         <div class="section-heading">
-          <div class="label">Activities & Projects</div>
-          <h2>My learning journey so far.</h2>
+
+          <div class="label">
+            Activities & Projects
+          </div>
+
+          <h2>
+            My learning journey so far.
+          </h2>
+
           <p>
             A collection of the activities and practical work completed during
             my portfolio journey.
           </p>
+
         </div>
 
         <div class="activity-grid">
+
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 00</div>
             <h3>Development Environment Setup</h3>
-            <p>Set up the development environment and prepared the tools required for programming, Git, GitHub, and technical activities.</p>
+            <p>
+              Set up the development environment and prepared the tools
+              required for programming, Git, GitHub, and technical activities.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 01</div>
             <h3>VS Code C/C++ Setup</h3>
-            <p>Configured Visual Studio Code for C and C++ programming and learned to create, compile, and run programs.</p>
+            <p>
+              Configured Visual Studio Code for C and C++ programming and
+              learned to create, compile, and run programs.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 02</div>
             <h3>Extensions Tour</h3>
-            <p>Explored VS Code extensions for code execution, formatting, Git integration, and programming support.</p>
+            <p>
+              Explored VS Code extensions for code execution, formatting,
+              Git integration, and programming support.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 03</div>
             <h3>GitHub Fundamentals</h3>
-            <p>Learned about repositories, commits, branches, and pushing project files to GitHub while building a coding portfolio.</p>
+            <p>
+              Learned about repositories, commits, branches, and pushing
+              project files to GitHub while building a coding portfolio.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 04</div>
             <h3>Git</h3>
-            <p>Practiced initializing repositories, adding files, committing changes, and connecting projects to GitHub.</p>
+            <p>
+              Practiced initializing repositories, adding files, committing
+              changes, and connecting projects to GitHub.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 05</div>
             <h3>GitLens & Live Share</h3>
-            <p>Explored GitLens for change tracking and commit history, and Live Share for collaborative coding.</p>
+            <p>
+              Explored GitLens for change tracking and commit history, and
+              Live Share for collaborative coding.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 06</div>
             <h3>LeetCode Portfolio</h3>
-            <p>Created a LeetCode practice portfolio, solved programming problems, and organized solutions with documentation.</p>
+            <p>
+              Created a LeetCode practice portfolio, solved programming
+              problems, and organized solutions with documentation.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 07</div>
             <h3>Simple Line Editor</h3>
-            <p>Developed a Simple Line Editor in C for a coding competition, implemented commands and functionalities, tested it, and maintained it on GitHub.</p>
+            <p>
+              Developed a Simple Line Editor in C for a coding competition,
+              implemented commands and functionalities, tested it, and
+              maintained it on GitHub.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 08</div>
             <h3>HackerRank</h3>
-            <p>Practiced programming and problem-solving challenges and organized solutions as part of my coding portfolio.</p>
+            <p>
+              Practiced programming and problem-solving challenges and
+              organized solutions as part of my coding portfolio.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 09</div>
             <h3>LinkedIn</h3>
-            <p>Created and developed a professional LinkedIn profile with educational background, skills, projects, and relevant information.</p>
+            <p>
+              Created and developed a professional LinkedIn profile with
+              educational background, skills, projects, and relevant
+              information.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 10</div>
             <h3>LinkedIn Networking</h3>
-            <p>Explored professional networking and learned about building useful connections with students, professionals, and the technology community.</p>
+            <p>
+              Explored professional networking and learned about building
+              useful connections with students, professionals, and the
+              technology community.
+            </p>
           </article>
 
           <article class="activity-card">
             <div class="activity-number">ACTIVITY 11</div>
             <h3>Instagram Coding</h3>
-            <p>Explored Instagram for sharing coding and learning activities and presenting technical interests in an engaging way.</p>
+            <p>
+              Explored Instagram for sharing coding and learning activities
+              and presenting technical interests in an engaging way.
+            </p>
           </article>
+
         </div>
       </div>
     </section>
@@ -764,39 +1069,109 @@
     <!-- Skills -->
     <section id="skills">
       <div class="container">
+
         <div class="section-heading">
-          <div class="label">Skills</div>
-          <h2>What I'm building.</h2>
-          <p>Technical and supporting skills developed through coursework and portfolio activities.</p>
+
+          <div class="label">
+            Skills
+          </div>
+
+          <h2>
+            What I'm building.
+          </h2>
+
+          <p>
+            Technical and supporting skills developed through coursework
+            and portfolio activities.
+          </p>
+
         </div>
 
         <div class="skills-grid">
+
           <div class="skill-group">
-            <h3>Technical Skills</h3>
+
+            <h3>
+              Technical Skills
+            </h3>
+
             <div class="tags">
-              <span class="tag">C Programming</span>
-              <span class="tag">Basic C++</span>
-              <span class="tag">Data Structures</span>
-              <span class="tag">DBMS</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
-              <span class="tag">VS Code</span>
-              <span class="tag">Problem-Solving</span>
+
+              <span class="tag">
+                C Programming
+              </span>
+
+              <span class="tag">
+                Basic C++
+              </span>
+
+              <span class="tag">
+                Data Structures
+              </span>
+
+              <span class="tag">
+                DBMS
+              </span>
+
+              <span class="tag">
+                SQL
+              </span>
+
+              <span class="tag">
+                Git
+              </span>
+
+              <span class="tag">
+                GitHub
+              </span>
+
+              <span class="tag">
+                VS Code
+              </span>
+
+              <span class="tag">
+                Problem-Solving
+              </span>
+
             </div>
           </div>
 
           <div class="skill-group">
-            <h3>Platforms & Professional Skills</h3>
+
+            <h3>
+              Platforms & Professional Skills
+            </h3>
+
             <div class="tags">
-              <span class="tag">LeetCode</span>
-              <span class="tag">HackerRank</span>
-              <span class="tag">Professional Networking</span>
-              <span class="tag">Collaboration</span>
-              <span class="tag">Documentation</span>
-              <span class="tag">Presenting Work Online</span>
+
+              <span class="tag">
+                LeetCode
+              </span>
+
+              <span class="tag">
+                HackerRank
+              </span>
+
+              <span class="tag">
+                Professional Networking
+              </span>
+
+              <span class="tag">
+                Collaboration
+              </span>
+
+              <span class="tag">
+                Documentation
+              </span>
+
+              <span class="tag">
+                Presenting Work Online
+              </span>
+
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
@@ -804,66 +1179,169 @@
     <!-- Career / Learning Goal -->
     <section class="goal" id="goal">
       <div class="container">
+
         <div class="section-heading">
-          <div class="label">Career / Learning Goal</div>
-          <h2>Building towards future opportunities.</h2>
+
+          <div class="label">
+            Career / Learning Goal
+          </div>
+
+          <h2>
+            Building towards future opportunities.
+          </h2>
+
         </div>
 
         <div class="goal-box">
+
           <p>
-            My goal is to strengthen my programming and problem-solving skills
-            and build a strong technical portfolio during my B.Tech. I want to
-            gain practical experience through projects, coding practice, and
-            internships so that I can be better prepared for future career
-            opportunities in the technology field.
+            My goal is to strengthen my programming and problem-solving
+            skills and build a strong technical portfolio during my B.Tech.
+            I want to gain practical experience through projects, coding
+            practice, and internships so that I can be better prepared for
+            future career opportunities in the technology field.
           </p>
+
         </div>
+
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact">
       <div class="container">
+
         <div class="section-heading">
-          <div class="label">Contact</div>
-          <h2>Find my work online.</h2>
+
+          <div class="label">
+            Contact
+          </div>
+
+          <h2>
+            Find my work online.
+          </h2>
+
           <p>
             Explore my coding and professional learning journey through the
             platforms used in my portfolio activities.
           </p>
+
         </div>
 
         <div class="contact-grid contact-grid-profiles">
+
+          <!-- GitHub -->
           <article class="contact-card profile-contact">
-            <div class="contact-icon">GH</div>
-            <h3>GitHub</h3>
-            <p>My coding projects, repositories, and portfolio work.</p>
-            <a class="social-link" href="https://github.com/nabiyakhan2202-alt" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
+
+            <div class="contact-icon">
+              GH
+            </div>
+
+            <h3>
+              GitHub
+            </h3>
+
+            <p>
+              My coding projects, repositories, and portfolio work.
+            </p>
+
+            <a
+              class="social-link"
+              href="https://github.com/nabiyakhan2202-alt"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>GitHub Profile</span>
+              <span>↗</span>
+            </a>
+
           </article>
 
+          <!-- LinkedIn -->
           <article class="contact-card profile-contact">
-            <div class="contact-icon">in</div>
-            <h3>LinkedIn</h3>
-            <p>My professional profile and networking presence.</p>
-            <a class="social-link" href="https://www.linkedin.com/in/nabiya-khan-828862384/" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a>
+
+            <div class="contact-icon">
+              in
+            </div>
+
+            <h3>
+              LinkedIn
+            </h3>
+
+            <p>
+              My professional profile and networking presence.
+            </p>
+
+            <a
+              class="social-link"
+              href="https://www.linkedin.com/in/nabiya-khan-828862384/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>LinkedIn Profile</span>
+              <span>↗</span>
+            </a>
+
           </article>
 
+          <!-- LeetCode -->
           <article class="contact-card profile-contact">
-            <div class="contact-icon">LC</div>
-            <h3>LeetCode</h3>
-            <p>My coding practice profile.</p>
-            <a class="social-link" href="https://leetcode.com/u/nabiyakhan/" target="_blank" rel="noopener noreferrer">LeetCode Profile ↗</a>
+
+            <div class="contact-icon">
+              LC
+            </div>
+
+            <h3>
+              LeetCode
+            </h3>
+
+            <p>
+              My coding practice profile.
+            </p>
+
+            <a
+              class="social-link"
+              href="https://leetcode.com/u/nabiyakhan/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>LeetCode Profile</span>
+              <span>↗</span>
+            </a>
+
           </article>
 
+          <!-- HackerRank -->
           <article class="contact-card profile-contact">
-            <div class="contact-icon">HR</div>
-            <h3>HackerRank</h3>
-            <p>My programming and problem-solving profile.</p>
-            <a class="social-link" href="https://www.hackerrank.com/khannabiya737" target="_blank" rel="noopener noreferrer">HackerRank Profile ↗</a>
+
+            <div class="contact-icon">
+              HR
+            </div>
+
+            <h3>
+              HackerRank
+            </h3>
+
+            <p>
+              My programming and problem-solving profile.
+            </p>
+
+            <a
+              class="social-link"
+              href="https://www.hackerrank.com/khannabiya737"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>HackerRank Profile</span>
+              <span>↗</span>
+            </a>
+
           </article>
+
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
@@ -871,5 +1349,6 @@
       © Nabiya Khan · B.Tech C&IT · REVA University
     </div>
   </footer>
+
 </body>
 </html>
